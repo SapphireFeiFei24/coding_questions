@@ -9,7 +9,7 @@
             * the prefix sum is the final result
 """
 def prefix_sum_1d(nums):
-    res = [0 for i in range(len(nums) + 1]
+    res = [0 for i in range(len(nums) + 1)]
     for i in range(nums):
         res[i + 1] = res[i] + nums[i]
     return res
