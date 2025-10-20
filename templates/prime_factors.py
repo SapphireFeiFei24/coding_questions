@@ -1,9 +1,9 @@
-'''
+"""
 Get all the prime factors for n
 
 Prime Number Theorem:
 Numbers of primes for k <= k and is approximately around k/ln(k)
-'''
+"""
 
 
 # Handles large n (up to around 10^12)
