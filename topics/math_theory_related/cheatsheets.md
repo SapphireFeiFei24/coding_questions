@@ -4,8 +4,8 @@
 ### when mod is a prime(10**9+7)
 > Fermat's little theorem
 ```python
-def inverse(prime, MOD):
-    pow(prime, MOD-2, MOD)
+def inverse(number, MOD):
+    pow(number, MOD-2, MOD)
 ```
 ### MOD is not prime but gcd(B, MOD) = 1
 > Extended Euclidean Algorithm
