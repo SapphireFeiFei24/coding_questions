@@ -19,6 +19,9 @@ The sign bit: highest bit, 0 represents non-negative, 1 represents negative
   * Negative number: add 1 to the inverse code
   * [Advantage 1] no -0, can represent -128 instead(minimum value for original and inverse is -127)
   * [Advantage 2] no subtraction problem
+  * Applications: two's complement representations
+    * Positive: itself
+    * Negative: ~X+1
 
 ## Concepts and properties of bitwise operators
 ### AND, OR, XOR and Negation
@@ -112,4 +115,21 @@ def reverseByte(byte):
 ## Get the rightmost byte
 ```python
 n & 0xFF
+```
+
+## Get a binary number of length k that is all 1s
+```python
+(1 << k) - 1
+```
+
+## Get common prefix of two number
+> Shift both numbers to the right until they become equal
+```python
+def get_common_prefix(m, n):
+  shift = 0
+  while m != n:
+    m >>= 1
+    n >>= 1
+    shift += 1
+  return m << shift
 ```
