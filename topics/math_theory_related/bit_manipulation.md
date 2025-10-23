@@ -22,6 +22,10 @@ The sign bit: highest bit, 0 represents non-negative, 1 represents negative
   * Applications: two's complement representations
     * Positive: itself
     * Negative: ~X+1
+    * How to get the original negative number from it's two's complement representation:
+      * `origin=complement-(1<<32)`
+    * Check if it's a negative number
+      * `num>=(1<<31)`
 
 ## Concepts and properties of bitwise operators
 ### AND, OR, XOR and Negation
