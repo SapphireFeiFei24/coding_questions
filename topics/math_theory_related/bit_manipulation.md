@@ -137,3 +137,14 @@ def get_common_prefix(m, n):
     shift += 1
   return m << shift
 ```
+## Number of valid bits
+* for cpp
+`__builtin_popcount(mask)`
+* Any language: precompute(O(N)) using `count[i] = count[i//2] + (i % 2 == 1)`
+## Bitmasking DP related
+* Get i-th bit in the state x
+``(x>>i) & 1``
+* Check if x is a subset of y
+``(x&y) == x``
+* Check if there are no adjacent valid status in x
+``(x&(x>>1))== 0``
