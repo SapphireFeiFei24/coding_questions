@@ -28,6 +28,8 @@ The sign bit: highest bit, 0 represents non-negative, 1 represents negative
       * `num>=(1<<31)`
 
 ## Concepts and properties of bitwise operators
+> Operator Priority: (from highest to low) \
+> ~, <</>>, &, ^, |
 ### AND, OR, XOR and Negation
 * AND `&`
 * OR `|`
@@ -108,7 +110,18 @@ a // 16 == a >> 4
 ```
 * For non-powers of two // TODO: dig deeper later
   * Division: multiply by "magic constant" + shift
-
+* Addition and Difference
+> When a > b >= 0
+```python
+def a_plus_b(a, b): # a+b
+    while b:
+        a, b = a ^ b, (a & b) << 1
+    return a
+def a_subtract_b(a, b): # a-b
+    while b:
+        a, b = a ^ b, ((~a) & b) << 1
+    return b
+```
 # Cheetsheets
 ## Reverse bit for a byte
 ```python
