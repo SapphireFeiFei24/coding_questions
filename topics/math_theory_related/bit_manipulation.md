@@ -161,3 +161,5 @@ def get_common_prefix(m, n):
 ``(x&y) == x``
 * Check if there are no adjacent valid status in x
 ``(x&(x>>1))== 0``
+* Get the index of highest bit
+``x.bit_length() - 1``
